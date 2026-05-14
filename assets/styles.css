@@ -478,15 +478,20 @@ img, svg {
 .otp-row {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
   margin: 24px 0 8px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .otp-cell {
-  width: 100%;
-  min-width: 0;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
   height: 64px;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   text-align: center;
   font-size: 26px;
   font-weight: 700;
@@ -495,6 +500,8 @@ img, svg {
   border-radius: var(--radius-md);
   border: 1.5px solid var(--gray-300);
   background: white;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .otp-cell:focus {
