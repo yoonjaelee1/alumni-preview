@@ -255,13 +255,51 @@
               <div class="body-sm">이직 / 재취업</div>
             </div>
 
-            <div class="mb-6">
-              <div class="caption mb-2">표시될 내용</div>
-              <div class="body-sm" style="line-height:1.8;">
-                성명: 이윤재 (Lee Yoonjae)<br/>
-                소속: HR본부 TM팀 / 매니저<br/>
-                재직: 2021.03.15 ~ 2025.11.30
+            <div class="divider"></div>
+
+            <!-- 신청자 입력 vs 인사 기록 비교 -->
+            <div class="caption" style="font-weight:600; color:var(--gray-700); margin-bottom: 12px; letter-spacing: 0.02em;">신청자 입력 정보 (참고)</div>
+            <div class="card card--flat" style="padding: 14px 16px; margin-bottom: 20px; font-size:13px; line-height:1.85;">
+              <div class="row" style="justify-content:space-between;"><span class="text-muted">성명</span><span>이윤재 · Lee Yoonjae</span></div>
+              <div class="row" style="justify-content:space-between;"><span class="text-muted">생년월일</span><span>1995-08-12</span></div>
+              <div class="row" style="justify-content:space-between;"><span class="text-muted">소속</span><span>HR본부 TM팀 · 매니저</span></div>
+              <div class="row" style="justify-content:space-between;"><span class="text-muted">재직</span><span>2021-03-15 ~ 2025-11-30</span></div>
+            </div>
+
+            <!-- 어드민이 실제로 발급할 내용 -->
+            <div class="row" style="justify-content:space-between; margin-bottom: 12px;">
+              <div class="caption" style="font-weight:600; color:var(--gray-900); letter-spacing: 0.02em;">증명서 발급 내용 (인사 기록 기준)</div>
+              <span class="badge badge--success" style="font-size:11px;">✓ 인사 DB 자동</span>
+            </div>
+            <p class="caption mb-3">아래 내용은 인사 DB에서 자동으로 불러온 값입니다. 필요 시 수정 후 발송하세요.</p>
+
+            <div class="field" style="margin-bottom: 12px;">
+              <label class="label" style="font-size:12px;">성명 (국문 / 영문)</label>
+              <div class="field-row" style="gap: 8px;">
+                <input class="input" style="padding: 10px 12px; font-size: 13px;" value="이윤재" />
+                <input class="input" style="padding: 10px 12px; font-size: 13px;" value="Lee Yoonjae" />
               </div>
+            </div>
+
+            <div class="field" style="margin-bottom: 12px;">
+              <label class="label" style="font-size:12px;">소속 · 직위</label>
+              <div class="field-row" style="gap: 8px;">
+                <input class="input" style="padding: 10px 12px; font-size: 13px;" value="HR본부 TM팀" />
+                <input class="input" style="padding: 10px 12px; font-size: 13px;" value="매니저" />
+              </div>
+            </div>
+
+            <div class="field" style="margin-bottom: 12px;">
+              <label class="label" style="font-size:12px;">재직 기간</label>
+              <div class="field-row" style="gap: 8px;">
+                <input class="input" style="padding: 10px 12px; font-size: 13px;" value="2021-03-15" />
+                <input class="input" style="padding: 10px 12px; font-size: 13px;" value="2025-11-30" />
+              </div>
+            </div>
+
+            <div class="field" style="margin-bottom: 16px;">
+              <label class="label" style="font-size:12px;">퇴사 사유</label>
+              <input class="input" style="padding: 10px 12px; font-size: 13px;" value="일신상의 사유" />
             </div>
 
             <div class="divider"></div>
@@ -269,13 +307,13 @@
             <div class="alert mb-4">
               <span data-icon="checkCircle" class="icon-sm"></span>
               <div>
-                <div class="alert__title">증명서 자동 생성 완료</div>
-                <div class="alert__body">인사 DB 기반으로 PDF가 생성되었습니다. 검토 후 발송해 주세요.</div>
+                <div class="alert__title">위 내용으로 증명서가 생성됩니다</div>
+                <div class="alert__body">발송 클릭 시 입력된 내용으로 PDF가 생성되어 신청자 이메일로 발송됩니다.</div>
               </div>
             </div>
 
             <div class="stack">
-              <button class="btn btn--primary btn--block">검토 후 발송</button>
+              <button class="btn btn--primary btn--block">증명서 발급 · 발송</button>
               <div class="row gap-2">
                 <button class="btn btn--outline btn--block">반려</button>
                 <button class="btn btn--outline btn--block">메모 남기기</button>

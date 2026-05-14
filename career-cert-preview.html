@@ -23,11 +23,11 @@
         <div class="step"><span class="step__num">3</span><span>발급 완료</span></div>
       </div>
 
-      <div class="row" style="justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom: 24px;">
+      <div class="row" style="justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom: 16px;">
         <div>
-          <div class="eyebrow">Preview</div>
+          <div class="eyebrow">Preview · 참고용</div>
           <h1 class="h1 mb-2">신청 내용 확인</h1>
-          <p class="body text-muted">아래 내용으로 인사팀에 발급 요청을 보냅니다.</p>
+          <p class="body text-muted">신청자 입력 기준 미리보기입니다. 실제 증명서는 인사팀이 회사 기록을 기준으로 작성합니다.</p>
         </div>
         <div class="row gap-2">
           <a href="career-cert-form.html" class="btn btn--outline">수정하기</a>
@@ -35,10 +35,22 @@
         </div>
       </div>
 
+      <div class="alert alert--warning" style="margin-bottom: 24px;">
+        <span data-icon="shield" class="icon-sm"></span>
+        <div>
+          <div class="alert__title">실제 증명서 내용은 인사팀 발급 시 확정됩니다</div>
+          <div class="alert__body">
+            아래 미리보기는 신청자가 입력한 정보로 생성된 참고 자료입니다.
+            인사팀이 회사 인사 기록을 기준으로 최종 증명서를 작성하므로 입사일, 소속, 직위 등 일부 항목은 다를 수 있습니다.
+          </div>
+        </div>
+      </div>
+
       <!-- Document preview -->
-      <div style="background: var(--gray-200); padding: 48px 24px; border-radius: var(--radius-lg);">
-        <div class="doc">
-          <div class="doc__no">증명서 번호: MRT-2026-05-14-00138</div>
+      <div style="background: var(--gray-200); padding: 48px 24px; border-radius: var(--radius-lg); position: relative;">
+        <div style="position:absolute; top: 16px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.6); color: white; padding: 6px 14px; border-radius: var(--radius-full); font-size: 12px; font-weight: 600; letter-spacing: 0.02em;">참고용 미리보기 · 신청자 입력 기준</div>
+        <div class="doc" style="margin-top: 16px;">
+          <div class="doc__no">증명서 번호 (예시): MRT-2026-05-14-00138</div>
           <h2 class="doc__title">경 력 증 명 서</h2>
 
           <table>
