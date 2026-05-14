@@ -105,8 +105,7 @@ function renderFooter() {
         <div>
           <div class="footer-title">지원</div>
           <a class="footer-link" href="#">자주 묻는 질문</a>
-          <a class="footer-link" href="mailto:hr@myrealtrip.com">인사팀 문의</a>
-          <a class="footer-link" href="mailto:payroll@myrealtrip.com">급여 문의</a>
+          <a class="footer-link" href="mailto:mrthr@myrealtrip.com">담당자 문의</a>
         </div>
         <div>
           <div class="footer-title">회사</div>
