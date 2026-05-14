@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>경력증명서 신청 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div data-include="header" data-active="certificates"></div>
+
+  <main>
+    <div class="container-narrow" style="padding: 48px 24px 80px;">
+      <a href="certificates.html" class="caption" style="color:var(--gray-600); margin-bottom: 16px; display:inline-block;">← 증명서 선택으로</a>
+
+      <!-- Stepper -->
+      <div class="stepper">
+        <div class="step active"><span class="step__num">1</span><span>발급 정보 입력</span></div>
+        <div class="step-bar"></div>
+        <div class="step"><span class="step__num">2</span><span>미리보기</span></div>
+        <div class="step-bar"></div>
+        <div class="step"><span class="step__num">3</span><span>발급 완료</span></div>
+      </div>
+
+      <div class="eyebrow">Career Certificate</div>
+      <h1 class="h1 mb-2">경력증명서 신청</h1>
+      <p class="body text-muted mb-8">발급에 필요한 정보를 입력해 주세요.</p>
+
+      <form action="career-cert-preview.html?mode=request" method="get">
+        <!-- 발급 정보 카드 -->
+        <div class="card mb-6">
+          <h2 class="card__title mb-6">발급 정보</h2>
+
+          <div class="field">
+            <label class="label label__required">언어</label>
+            <div data-radio-group class="grid grid-2 gap-3">
+              <label class="radio-card selected">
+                <span class="radio-card__dot"></span>
+                <div>
+                  <div class="body font-semibold">국문</div>
+                  <div class="caption">대한민국 내 제출용</div>
+                </div>
+                <input type="radio" name="lang" value="ko" checked hidden />
+              </label>
+              <label class="radio-card">
+                <span class="radio-card__dot"></span>
+                <div>
+                  <div class="body font-semibold">영문 (English)</div>
+                  <div class="caption">해외 제출용 · 회사 영문 직인 포함</div>
+                </div>
+                <input type="radio" name="lang" value="en" hidden />
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label label__required" for="copies">발급 부수</label>
+            <select class="select" id="copies">
+              <option value="1">1부</option>
+              <option value="2">2부</option>
+              <option value="3">3부</option>
+              <option value="5">5부</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="label label__required" for="purpose">제출 용도</label>
+            <select class="select" id="purpose">
+              <option value="">선택해주세요</option>
+              <option>이직 / 재취업</option>
+              <option>대출 / 금융 거래</option>
+              <option>비자 / 해외 체류</option>
+              <option>관공서 제출</option>
+              <option>기타</option>
+            </select>
+            <p class="help">선택하신 용도는 증명서 본문에 기재됩니다.</p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="submitto">제출처 <span class="caption" style="font-weight:400;">(선택)</span></label>
+            <input class="input" type="text" id="submitto" placeholder="예: 주식회사 OO" />
+          </div>
+        </div>
+
+        <!-- 표시 내용 -->
+        <div class="card mb-6">
+          <h2 class="card__title mb-6">증명서에 표시될 내용</h2>
+
+          <div class="card card--flat" style="padding: 20px;">
+            <div class="grid grid-2 gap-4">
+              <div>
+                <div class="caption">성명</div>
+                <div class="body font-semibold mt-1">이윤재</div>
+              </div>
+              <div>
+                <div class="caption">생년월일</div>
+                <div class="body font-semibold mt-1">1995-08-12</div>
+              </div>
+              <div>
+                <div class="caption">소속</div>
+                <div class="body font-semibold mt-1">HR본부 TM팀</div>
+              </div>
+              <div>
+                <div class="caption">직위</div>
+                <div class="body font-semibold mt-1">매니저</div>
+              </div>
+              <div>
+                <div class="caption">입사일</div>
+                <div class="body font-semibold mt-1">2021-03-15</div>
+              </div>
+              <div>
+                <div class="caption">퇴사일</div>
+                <div class="body font-semibold mt-1">2025-11-30</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="help mt-4">위 정보가 잘못되었다면 인사팀(<a href="mailto:hr@myrealtrip.com" style="color:var(--primary);">hr@myrealtrip.com</a>)으로 연락주세요.</p>
+        </div>
+
+        <!-- 수령 방식 -->
+        <div class="card mb-6">
+          <h2 class="card__title mb-6">수령 방식</h2>
+
+          <div data-radio-group class="stack">
+            <label class="radio-card selected">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">PDF 다운로드 + 이메일 발송</div>
+                <div class="caption">즉시 다운로드 후 yoonjae.lee@gmail.com 으로도 발송됩니다.</div>
+              </div>
+              <input type="radio" name="delivery" value="both" checked hidden />
+            </label>
+            <label class="radio-card">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">이메일 발송만</div>
+                <div class="caption">yoonjae.lee@gmail.com 으로 발송됩니다.</div>
+              </div>
+              <input type="radio" name="delivery" value="email" hidden />
+            </label>
+          </div>
+        </div>
+
+        <div class="row gap-2" style="justify-content: flex-end;">
+          <a href="certificates.html" class="btn btn--outline">취소</a>
+          <button type="submit" class="btn btn--primary">미리보기</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/partials.js"></script>
+</body>
+</html>

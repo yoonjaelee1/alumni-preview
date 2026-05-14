@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홈 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div data-include="header" data-active="dashboard"></div>
+
+  <main>
+    <div class="container" style="padding: 40px 24px 80px;">
+      <!-- 페이지 타이틀 + 재직정보 -->
+      <div class="row" style="justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 32px;">
+        <div>
+          <div class="eyebrow">Dashboard</div>
+          <h1 class="display-2" style="margin-bottom: 8px;">이윤재 님</h1>
+          <p class="body text-muted">HR본부 TM팀 · 매니저 · 재직기간 2021.03.15 ~ 2025.11.30</p>
+        </div>
+        <div class="card" style="padding: 16px 20px; min-width: 240px;">
+          <div class="caption" style="margin-bottom: 6px;">계정 상태</div>
+          <div class="row gap-2">
+            <span class="dot" style="background:var(--success); width:8px; height:8px;"></span>
+            <span class="body-sm font-semibold">본인 인증 완료</span>
+          </div>
+          <div class="caption" style="margin-top: 6px;">yoonjae.lee@gmail.com</div>
+        </div>
+      </div>
+
+      <!-- 증명서 신청 -->
+      <div class="row" style="justify-content:space-between; align-items:flex-end; margin-bottom: 16px;">
+        <h2 class="h2">증명서 신청</h2>
+        <a href="certificates.html" class="caption" style="color:var(--gray-700); font-weight:500;">전체 보기 →</a>
+      </div>
+
+      <div class="grid grid-3 grid--gap-lg">
+        <a href="career-cert-form.html" class="card card--interactive" style="text-decoration:none; color:inherit;">
+          <div class="row" style="justify-content: space-between; align-items: flex-start;">
+            <h3 class="h3">경력증명서</h3>
+            <span class="badge"><span class="dot"></span> 영업일 1일</span>
+          </div>
+          <p class="text-muted body-sm mt-3" style="line-height:1.7;">
+            국문 또는 영문 · 인사팀 검토 후 발송.
+          </p>
+          <div class="caption mt-4">신청하기 →</div>
+        </a>
+
+        <a href="payslip-request.html" class="card card--interactive" style="text-decoration:none; color:inherit;">
+          <div class="row" style="justify-content: space-between; align-items: flex-start;">
+            <h3 class="h3">급여명세서</h3>
+            <span class="badge"><span class="dot"></span> 영업일 1일</span>
+          </div>
+          <p class="text-muted body-sm mt-3" style="line-height:1.7;">
+            월 단위 기간 선택 후 인사팀 발송.
+          </p>
+          <div class="caption mt-4">신청하기 →</div>
+        </a>
+
+        <a href="withholding-request.html" class="card card--interactive" style="text-decoration:none; color:inherit;">
+          <div class="row" style="justify-content: space-between; align-items: flex-start;">
+            <h3 class="h3">근로소득원천징수영수증</h3>
+            <span class="badge"><span class="dot"></span> 영업일 1~2일</span>
+          </div>
+          <p class="text-muted body-sm mt-3" style="line-height:1.7;">
+            귀속연도 선택 후 회계팀 발송.
+          </p>
+          <div class="caption mt-4">신청하기 →</div>
+        </a>
+      </div>
+
+      <!-- 진행 중인 요청 -->
+      <div style="margin-top: 48px;">
+        <div class="row" style="justify-content:space-between; align-items:flex-end; margin-bottom: 16px;">
+          <h2 class="h2">진행 중인 요청</h2>
+          <a href="history.html" class="caption" style="color:var(--gray-700); font-weight:500;">전체 내역 →</a>
+        </div>
+        <div class="card" style="padding: 0;">
+          <div style="padding: 18px 24px; border-bottom: 1px solid var(--gray-200);">
+            <div class="row" style="justify-content:space-between;">
+              <div>
+                <div class="body-sm font-semibold">경력증명서</div>
+                <div class="caption mt-1">국문 · 1부 · 신청 30분 전</div>
+              </div>
+              <span class="badge badge--warning">담당자 확인 중</span>
+            </div>
+          </div>
+          <div style="padding: 18px 24px; border-bottom: 1px solid var(--gray-200);">
+            <div class="row" style="justify-content:space-between;">
+              <div>
+                <div class="body-sm font-semibold">급여명세서</div>
+                <div class="caption mt-1">2024.06 ~ 2024.12 · 신청 1시간 전</div>
+              </div>
+              <span class="badge badge--warning">담당자 확인 중</span>
+            </div>
+          </div>
+          <div style="padding: 18px 24px;">
+            <div class="row" style="justify-content:space-between;">
+              <div>
+                <div class="body-sm font-semibold">근로소득원천징수영수증</div>
+                <div class="caption mt-1">2024년 귀속 · 신청 2일 전</div>
+              </div>
+              <span class="badge badge--info">처리 중</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 개인정보 안내 -->
+      <div class="alert" style="margin-top: 32px;">
+        <span data-icon="shield" class="icon"></span>
+        <div>
+          <div class="alert__title">발급 문서 발송 안내</div>
+          <div class="alert__body">
+            모든 증명서는 본인이 등록한 이메일(yoonjae.lee@gmail.com)로만 발송됩니다.
+            이메일 변경이 필요한 경우 인사팀(hr@myrealtrip.com)으로 문의해 주시기 바랍니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/partials.js"></script>
+</body>
+</html>

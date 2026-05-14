@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>경력증명서 미리보기 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div data-include="header" data-active="certificates"></div>
+
+  <main>
+    <div class="container" style="padding: 48px 24px 80px;">
+      <a href="career-cert-form.html" class="caption" style="color:var(--gray-600); margin-bottom: 16px; display:inline-block;">← 입력 페이지로</a>
+
+      <!-- Stepper -->
+      <div class="stepper">
+        <div class="step done"><span class="step__num"><span data-icon="check" style="display:inline-flex; width:12px; height:12px;"></span></span><span>발급 정보 입력</span></div>
+        <div class="step-bar"></div>
+        <div class="step active"><span class="step__num">2</span><span>미리보기</span></div>
+        <div class="step-bar"></div>
+        <div class="step"><span class="step__num">3</span><span>발급 완료</span></div>
+      </div>
+
+      <div class="row" style="justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom: 24px;">
+        <div>
+          <div class="eyebrow">Preview</div>
+          <h1 class="h1 mb-2">신청 내용 확인</h1>
+          <p class="body text-muted">아래 내용으로 인사팀에 발급 요청을 보냅니다.</p>
+        </div>
+        <div class="row gap-2">
+          <a href="career-cert-form.html" class="btn btn--outline">수정하기</a>
+          <a href="request-submitted.html?type=career" class="btn btn--primary">요청 보내기</a>
+        </div>
+      </div>
+
+      <!-- Document preview -->
+      <div style="background: var(--gray-200); padding: 48px 24px; border-radius: var(--radius-lg);">
+        <div class="doc">
+          <div class="doc__no">증명서 번호: MRT-2026-05-14-00138</div>
+          <h2 class="doc__title">경 력 증 명 서</h2>
+
+          <table>
+            <tr><th>성 명</th><td>이윤재 (Lee Yoonjae)</td></tr>
+            <tr><th>생 년 월 일</th><td>1995년 8월 12일</td></tr>
+            <tr><th>소 속</th><td>HR본부 TM팀</td></tr>
+            <tr><th>직 위</th><td>매니저</td></tr>
+            <tr><th>재 직 기 간</th><td>2021년 3월 15일 ~ 2025년 11월 30일 (4년 8개월)</td></tr>
+            <tr><th>퇴 사 사 유</th><td>일신상의 사유</td></tr>
+          </table>
+
+          <p class="doc__statement">
+            위 사람은 본사에서 위와 같이 재직하였음을 증명합니다.
+            <br/><br/>
+            본 증명서는 이직 / 재취업 용도로 발급되었으며,
+            발급일로부터 30일간 유효합니다.
+          </p>
+
+          <div class="doc__date">2026년 5월 14일</div>
+
+          <div class="doc__seal-row">
+            <div class="doc__company">주식회사 마이리얼트립</div>
+            <div class="caption" style="color:var(--gray-700);">대표이사 이 동 건</div>
+            <div class="doc__seal">마이리얼트립<br/>대표이사인</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 안내 -->
+      <div class="card card--flat" style="max-width: 720px; margin: 24px auto 0;">
+        <h3 class="h4 mb-2">처리 안내</h3>
+        <ul class="text-muted body-sm" style="line-height: 1.9; padding-left: 18px; margin: 0;">
+          <li>요청 후 인사팀이 인사 기록을 대조하여 검토합니다.</li>
+          <li>승인 완료 시 등록된 이메일 <strong>yoonjae.lee@gmail.com</strong> 으로 PDF가 발송됩니다.</li>
+          <li>처리 소요 시간: 영업일 기준 1일 이내.</li>
+          <li>발급 이력 및 진행 상태는 <a href="history.html" style="color:var(--gray-900); text-decoration:underline;">신청 내역</a>에서 확인할 수 있습니다.</li>
+          <li>증명서 위·변조 방지를 위해 발급 번호와 QR 코드가 포함됩니다.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/partials.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>담당자 대시보드 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .admin-header { background: var(--black); border-bottom: none; }
+    .admin-header .brand { color: white; }
+    .admin-header .brand__sub { color: var(--primary); }
+    .admin-header .nav-link { color: var(--gray-400); }
+    .admin-header .nav-link.active { color: white; }
+    .admin-header .nav-link:hover { color: white; }
+    .admin-header .user-chip { background: rgba(255,255,255,0.08); color: white; }
+
+    .kpi-card {
+      padding: 24px;
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+    }
+    .kpi-card__value {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin: 4px 0;
+    }
+    .kpi-card__delta {
+      font-size: 13px;
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .request-row {
+      padding: 20px;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      transition: border-color 0.15s;
+    }
+    .request-row:hover { border-color: var(--primary); }
+    .request-row.urgent { border-left: 3px solid var(--danger); }
+  </style>
+</head>
+<body>
+  <header class="site-header admin-header">
+    <div class="container site-header__inner">
+      <a href="admin.html" class="brand">
+        <span class="brand__mark">M</span>
+        <span class="brand__name" style="color:white;">MyRealTrip <span class="brand__sub">Alumni Admin</span></span>
+      </a>
+      <nav class="nav-menu">
+        <a href="#" class="nav-link active">요청 관리</a>
+        <a href="#" class="nav-link">발급 내역</a>
+        <a href="#" class="nav-link">알럼나이 회원</a>
+        <a href="#" class="nav-link">설정</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="테마 전환" style="border-color: rgba(255,255,255,0.15); color: #A1A1A1;"></button>
+        <button class="btn btn--icon btn--ghost" aria-label="알림" style="color:white;">
+          <span data-icon="bell"></span>
+        </button>
+        <div class="user-chip">
+          <span class="avatar" style="background:var(--gray-700);">김</span>
+          <span>김인사 매니저</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding: 32px 24px 80px;">
+      <!-- 상단 요약 -->
+      <div class="row" style="justify-content:space-between; flex-wrap:wrap; margin-bottom: 24px;">
+        <div>
+          <div class="eyebrow">Admin</div>
+          <h1 class="h1 mb-2">요청 관리</h1>
+          <p class="body-sm text-muted">알럼나이 사이트로 접수된 증명서 발급 요청을 처리합니다.</p>
+        </div>
+        <div class="row gap-2">
+          <button class="btn btn--outline btn--sm">내역 내보내기</button>
+          <button class="btn btn--outline btn--sm">필터</button>
+        </div>
+      </div>
+
+      <!-- KPI -->
+      <div class="grid grid-4 grid--gap-lg mb-8">
+        <div class="kpi-card">
+          <div class="caption">대기 중인 요청</div>
+          <div class="kpi-card__value">7</div>
+        </div>
+        <div class="kpi-card">
+          <div class="caption">오늘 처리 완료</div>
+          <div class="kpi-card__value">12</div>
+        </div>
+        <div class="kpi-card">
+          <div class="caption">이번 주 처리</div>
+          <div class="kpi-card__value">38</div>
+        </div>
+        <div class="kpi-card">
+          <div class="caption">평균 처리 시간</div>
+          <div class="kpi-card__value">5.2<span style="font-size:16px; color:var(--gray-500); font-weight:500;">h</span></div>
+        </div>
+      </div>
+
+      <!-- 메인 영역: 좌 요청 리스트 + 우 상세 -->
+      <div class="grid" style="grid-template-columns: 1.4fr 1fr; gap: 24px;">
+        <!-- 좌측: 요청 리스트 -->
+        <div>
+          <div class="row" style="justify-content:space-between; margin-bottom: 16px;">
+            <h2 class="h3">처리할 요청 (7)</h2>
+            <div class="row gap-2">
+              <button class="btn btn--secondary btn--sm">전체</button>
+              <button class="btn btn--outline btn--sm">경력증명서 (2)</button>
+              <button class="btn btn--outline btn--sm">급여명세서 (3)</button>
+              <button class="btn btn--outline btn--sm">원천징수 (2)</button>
+            </div>
+          </div>
+
+          <div class="stack">
+            <article class="request-row urgent">
+              <div class="row" style="justify-content:space-between; align-items:flex-start;">
+                <div style="flex:1;">
+                  <div class="row gap-2 mb-2">
+                    <span class="badge badge--warning">방금 접수</span>
+                    <span class="badge"><span data-icon="badge" class="icon-sm"></span> 경력증명서</span>
+                  </div>
+                  <div class="body font-semibold">이윤재 매니저 · 국문 1부</div>
+                  <div class="caption mt-1">REQ-...-00238 · 신청 2026.05.14 15:48 · 사유: 이직 / 재취업</div>
+                </div>
+                <button class="btn btn--primary btn--sm">처리하기 →</button>
+              </div>
+            </article>
+
+            <article class="request-row urgent">
+              <div class="row" style="justify-content:space-between; align-items:flex-start;">
+                <div style="flex:1;">
+                  <div class="row gap-2 mb-2">
+                    <span class="badge badge--danger">3일 경과</span>
+                    <span class="badge"><span data-icon="receipt" class="icon-sm"></span> 급여명세서</span>
+                  </div>
+                  <div class="body font-semibold">김지수 매니저 · 2024.06 ~ 2025.11 (18개월)</div>
+                  <div class="caption mt-1">REQ-...-00237 · 신청 2026.05.11 · 사유: 이직 / 재취업</div>
+                </div>
+                <button class="btn btn--primary btn--sm">처리하기 →</button>
+              </div>
+            </article>
+
+            <article class="request-row urgent">
+              <div class="row" style="justify-content:space-between; align-items:flex-start;">
+                <div style="flex:1;">
+                  <div class="row gap-2 mb-2">
+                    <span class="badge badge--danger">2일 경과</span>
+                    <span class="badge"><span data-icon="doc" class="icon-sm"></span> 원천징수영수증</span>
+                  </div>
+                  <div class="body font-semibold">박지원 매니저 · 2024년 귀속</div>
+                  <div class="caption mt-1">REQ-...-00236 · 신청 2026.05.12 · 사유: 연말정산</div>
+                </div>
+                <button class="btn btn--primary btn--sm">처리하기 →</button>
+              </div>
+            </article>
+
+            <article class="request-row">
+              <div class="row" style="justify-content:space-between; align-items:flex-start;">
+                <div style="flex:1;">
+                  <div class="row gap-2 mb-2">
+                    <span class="badge badge--warning">오늘</span>
+                    <span class="badge"><span data-icon="receipt" class="icon-sm"></span> 급여명세서</span>
+                  </div>
+                  <div class="body font-semibold">최서연 시니어 · 2025.01 ~ 2025.06</div>
+                  <div class="caption mt-1">REQ-...-00240 · 신청 2026.05.14 09:12 · 사유: 대출</div>
+                </div>
+                <button class="btn btn--outline btn--sm">처리하기 →</button>
+              </div>
+            </article>
+
+            <article class="request-row">
+              <div class="row" style="justify-content:space-between; align-items:flex-start;">
+                <div style="flex:1;">
+                  <div class="row gap-2 mb-2">
+                    <span class="badge badge--warning">오늘</span>
+                    <span class="badge"><span data-icon="receipt" class="icon-sm"></span> 급여명세서</span>
+                  </div>
+                  <div class="body font-semibold">정민수 매니저 · 2023.10 ~ 2024.05</div>
+                  <div class="caption mt-1">REQ-...-00239 · 신청 2026.05.14 10:45 · 사유: 비자</div>
+                </div>
+                <button class="btn btn--outline btn--sm">처리하기 →</button>
+              </div>
+            </article>
+
+            <article class="request-row">
+              <div class="row" style="justify-content:space-between; align-items:flex-start;">
+                <div style="flex:1;">
+                  <div class="row gap-2 mb-2">
+                    <span class="badge badge--warning">오늘</span>
+                    <span class="badge"><span data-icon="doc" class="icon-sm"></span> 원천징수영수증</span>
+                  </div>
+                  <div class="body font-semibold">한지민 매니저 · 2022년, 2023년 귀속</div>
+                  <div class="caption mt-1">REQ-...-00238 · 신청 2026.05.14 11:30 · 사유: 종합소득세 신고</div>
+                </div>
+                <button class="btn btn--outline btn--sm">처리하기 →</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 우측: 선택된 요청 상세 -->
+        <aside>
+          <div class="card" style="position: sticky; top: 96px;">
+            <div class="row mb-4" style="justify-content:space-between;">
+              <span class="badge badge--warning">방금 접수</span>
+              <button class="btn btn--ghost btn--sm">✕</button>
+            </div>
+            <h3 class="h3 mb-1">경력증명서 요청</h3>
+            <div class="caption mb-6">REQ-2026-05-14-00238</div>
+
+            <div class="card card--flat" style="padding: 16px; margin-bottom: 20px;">
+              <div class="row gap-3">
+                <span class="avatar lg">이</span>
+                <div>
+                  <div class="body font-semibold">이윤재 매니저</div>
+                  <div class="caption">HR본부 TM팀 · 2021.03 ~ 2025.11</div>
+                </div>
+              </div>
+              <div class="divider" style="margin: 16px 0 12px;"></div>
+              <div class="caption">
+                <div style="display:flex; justify-content:space-between; padding: 4px 0;">
+                  <span>본인 인증</span>
+                  <span style="color:var(--success); font-weight:600;">✓ 완료 (2026.05.14 15:42)</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 4px 0;">
+                  <span>인사 DB 매칭</span>
+                  <span style="color:var(--success); font-weight:600;">✓ 일치</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 4px 0;">
+                  <span>등록 이메일</span>
+                  <span>yoonjae.lee@gmail.com</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="caption mb-2">요청 내용</div>
+              <div class="body-sm">
+                경력증명서 · 국문 · 1부<br/>
+                제출처: <strong>주식회사 OO</strong>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="caption mb-2">신청 사유</div>
+              <div class="body-sm">이직 / 재취업</div>
+            </div>
+
+            <div class="mb-6">
+              <div class="caption mb-2">표시될 내용</div>
+              <div class="body-sm" style="line-height:1.8;">
+                성명: 이윤재 (Lee Yoonjae)<br/>
+                소속: HR본부 TM팀 / 매니저<br/>
+                재직: 2021.03.15 ~ 2025.11.30
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="alert mb-4">
+              <span data-icon="checkCircle" class="icon-sm"></span>
+              <div>
+                <div class="alert__title">증명서 자동 생성 완료</div>
+                <div class="alert__body">인사 DB 기반으로 PDF가 생성되었습니다. 검토 후 발송해 주세요.</div>
+              </div>
+            </div>
+
+            <div class="stack">
+              <button class="btn btn--primary btn--block">검토 후 발송</button>
+              <div class="row gap-2">
+                <button class="btn btn--outline btn--block">반려</button>
+                <button class="btn btn--outline btn--block">메모 남기기</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/partials.js"></script>
+</body>
+</html>

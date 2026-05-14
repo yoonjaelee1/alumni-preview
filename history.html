@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>신청 내역 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div data-include="header" data-active="history"></div>
+
+  <main>
+    <div class="container" style="padding: 48px 24px 80px;">
+      <a href="dashboard.html" class="caption" style="color:var(--gray-600); margin-bottom: 16px; display:inline-block;">← 홈으로</a>
+
+      <div class="row" style="justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom: 32px;">
+        <div>
+          <div class="eyebrow">History</div>
+          <h1 class="display-2" style="margin-bottom: 8px;">신청 내역</h1>
+          <p class="body text-muted">발급 요청 내역과 처리 상태를 확인할 수 있습니다.</p>
+        </div>
+        <a href="certificates.html" class="btn btn--primary">새 증명서 발급</a>
+      </div>
+
+      <!-- 요약 통계 -->
+      <div class="grid grid-4 grid--gap-lg mb-8">
+        <div class="card" style="padding: 16px 20px;">
+          <div class="caption">전체 신청</div>
+          <div style="font-size:24px; font-weight:700; color:var(--gray-900); margin-top:4px;">12</div>
+        </div>
+        <div class="card" style="padding: 16px 20px;">
+          <div class="caption">처리 중</div>
+          <div style="font-size:24px; font-weight:700; color:var(--gray-900); margin-top:4px;">2</div>
+        </div>
+        <div class="card" style="padding: 16px 20px;">
+          <div class="caption">발급 완료</div>
+          <div style="font-size:24px; font-weight:700; color:var(--gray-900); margin-top:4px;">10</div>
+        </div>
+        <div class="card" style="padding: 16px 20px;">
+          <div class="caption">반려</div>
+          <div style="font-size:24px; font-weight:700; color:var(--gray-900); margin-top:4px;">0</div>
+        </div>
+      </div>
+
+      <!-- 필터 -->
+      <div class="card" style="padding: 16px 20px; margin-bottom: 16px;">
+        <div class="row gap-3" style="flex-wrap: wrap;">
+          <input class="input" placeholder="요청 번호 또는 증명서명으로 검색" style="flex:1; min-width:240px;" />
+          <select class="select" style="width: auto;">
+            <option>전체 상태</option>
+            <option>처리 중</option>
+            <option>발급 완료</option>
+            <option>반려</option>
+          </select>
+          <select class="select" style="width: auto;">
+            <option>전체 종류</option>
+            <option>경력증명서</option>
+            <option>급여명세서</option>
+            <option>원천징수영수증</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 내역 리스트 -->
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>요청 번호</th>
+              <th>증명서 종류</th>
+              <th>상세</th>
+              <th>신청일</th>
+              <th>상태</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600; color:var(--gray-900);">REQ-...-00237</td>
+              <td>
+                <div class="row gap-2">
+                  <span data-icon="receipt" class="icon-sm text-info"></span>
+                  <span>급여명세서</span>
+                </div>
+              </td>
+              <td class="caption">2024.06 ~ 2025.11</td>
+              <td class="caption">2026.05.14 15:48</td>
+              <td><span class="badge badge--warning"><span class="dot"></span> 담당자 확인 중</span></td>
+              <td><a href="#" class="caption" style="color:var(--primary); font-weight:600;">상세 →</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">REQ-...-00236</td>
+              <td>
+                <div class="row gap-2">
+                  <span data-icon="doc" class="icon-sm" style="color:var(--warning);"></span>
+                  <span>원천징수영수증</span>
+                </div>
+              </td>
+              <td class="caption">2024년 귀속</td>
+              <td class="caption">2026.05.12 11:20</td>
+              <td><span class="badge badge--info"><span class="dot"></span> 처리 중</span></td>
+              <td><a href="#" class="caption" style="color:var(--primary); font-weight:600;">상세 →</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">MRT-...-00138</td>
+              <td>
+                <div class="row gap-2">
+                  <span data-icon="badge" class="icon-sm text-primary"></span>
+                  <span>경력증명서</span>
+                </div>
+              </td>
+              <td class="caption">국문 · 1부</td>
+              <td class="caption">2026.05.14 15:42</td>
+              <td><span class="badge badge--success"><span class="dot"></span> 발급 완료</span></td>
+              <td><button class="btn btn--ghost btn--sm">다운로드</button></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">MRT-...-00102</td>
+              <td>
+                <div class="row gap-2">
+                  <span data-icon="badge" class="icon-sm text-primary"></span>
+                  <span>경력증명서</span>
+                </div>
+              </td>
+              <td class="caption">영문 · 2부</td>
+              <td class="caption">2026.04.20 09:15</td>
+              <td><span class="badge badge--success"><span class="dot"></span> 발급 완료</span></td>
+              <td><button class="btn btn--ghost btn--sm">다운로드</button></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">REQ-...-00187</td>
+              <td>
+                <div class="row gap-2">
+                  <span data-icon="receipt" class="icon-sm text-info"></span>
+                  <span>급여명세서</span>
+                </div>
+              </td>
+              <td class="caption">2025.01 ~ 2025.06</td>
+              <td class="caption">2026.03.18 14:30</td>
+              <td><span class="badge badge--success"><span class="dot"></span> 발급 완료</span></td>
+              <td><a href="#" class="caption" style="color:var(--primary); font-weight:600;">상세 →</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">REQ-...-00159</td>
+              <td>
+                <div class="row gap-2">
+                  <span data-icon="doc" class="icon-sm" style="color:var(--warning);"></span>
+                  <span>원천징수영수증</span>
+                </div>
+              </td>
+              <td class="caption">2023년 귀속</td>
+              <td class="caption">2026.02.10 16:55</td>
+              <td><span class="badge badge--success"><span class="dot"></span> 발급 완료</span></td>
+              <td><a href="#" class="caption" style="color:var(--primary); font-weight:600;">상세 →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 페이지네이션 -->
+      <div class="row" style="justify-content:center; gap:8px; margin-top: 24px;">
+        <button class="btn btn--outline btn--sm" disabled>이전</button>
+        <button class="btn btn--primary btn--sm">1</button>
+        <button class="btn btn--outline btn--sm">2</button>
+        <button class="btn btn--outline btn--sm">다음</button>
+      </div>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/partials.js"></script>
+</body>
+</html>

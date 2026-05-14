@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>본인 확인 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="auth-shell" style="align-items: flex-start; padding-top: 64px;">
+    <div class="auth-card" style="max-width: 560px;">
+      <div class="auth-card__brand">
+        <a href="index.html" class="brand">
+          <span class="brand__mark">M</span>
+          <span class="brand__name">MyRealTrip <span class="brand__sub">Alumni</span></span>
+        </a>
+      </div>
+
+      <!-- Stepper -->
+      <div class="stepper" style="justify-content:center;">
+        <div class="step done"><span class="step__num"><span data-icon="check" style="display:inline-flex; width:12px; height:12px;"></span></span><span>이메일</span></div>
+        <div class="step-bar"></div>
+        <div class="step active"><span class="step__num">2</span><span>본인 확인</span></div>
+        <div class="step-bar"></div>
+        <div class="step"><span class="step__num">3</span><span>완료</span></div>
+      </div>
+
+      <h1 class="auth-card__title">본인 정보를 확인해주세요</h1>
+      <p class="auth-card__sub">
+        입력하신 정보가 마이리얼트립 인사 기록과 일치하는지 확인합니다.<br/>
+        개인정보는 본인 확인 목적으로만 사용됩니다.
+      </p>
+
+      <form action="dashboard.html" method="get">
+        <div class="field">
+          <label class="label label__required" for="name">이름</label>
+          <input class="input" type="text" id="name" placeholder="홍길동" required />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label class="label label__required" for="birth">생년월일</label>
+            <input class="input" type="text" id="birth" placeholder="YYYY-MM-DD" required />
+          </div>
+          <div class="field">
+            <label class="label label__required" for="phone">휴대폰 번호</label>
+            <input class="input" type="tel" id="phone" placeholder="010-0000-0000" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label class="label label__required" for="joindate">입사일</label>
+            <input class="input" type="text" id="joindate" placeholder="YYYY-MM-DD" required />
+          </div>
+          <div class="field">
+            <label class="label label__required" for="leavedate">퇴사일</label>
+            <input class="input" type="text" id="leavedate" placeholder="YYYY-MM-DD" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="dept">마지막 소속 부서 <span class="caption" style="font-weight:400;">(선택)</span></label>
+          <input class="input" type="text" id="dept" placeholder="예: HR본부 TM팀" />
+          <p class="help">정확하지 않아도 괜찮아요. 매칭 정확도를 높이는 데 사용됩니다.</p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="workmail">재직 시 사용했던 회사 이메일 <span class="caption" style="font-weight:400;">(선택)</span></label>
+          <input class="input" type="email" id="workmail" placeholder="example@myrealtrip.com" />
+        </div>
+
+        <div class="alert" style="margin: 24px 0;">
+          <span data-icon="shield" class="icon"></span>
+          <div>
+            <div class="alert__title">개인정보는 본인 확인 후 즉시 폐기됩니다</div>
+            <div class="alert__body">입력하신 정보는 인사 기록과의 일회성 매칭에만 사용되며, 별도 저장되지 않습니다.</div>
+          </div>
+        </div>
+
+        <label class="row" style="cursor:pointer; padding: 12px 0;">
+          <input type="checkbox" required style="width:18px; height:18px; accent-color: var(--primary);" />
+          <span class="body-sm">
+            <strong>(필수)</strong> 개인정보 수집·이용에 동의합니다.
+            <a href="#" style="color:var(--primary); text-decoration:underline;">자세히 보기</a>
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--block" style="margin-top: 16px;">
+          본인 확인 완료 <span data-icon="arrowRight"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/partials.js"></script>
+</body>
+</html>

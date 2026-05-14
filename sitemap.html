@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전체 페이지 · MyRealTrip Alumni 프로토타입</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .frame-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: border-color 0.15s, background 0.15s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .frame-card:hover { border-color: var(--gray-400); background: var(--gray-50); }
+    .frame-card__no {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-500);
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .frame-card__title { font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 4px; }
+    .frame-card__desc { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <main>
+    <section style="padding: 64px 0 32px; border-bottom: 1px solid var(--gray-300);">
+      <div class="container">
+        <div class="row" style="justify-content:space-between; align-items:flex-start;">
+          <div>
+            <div class="eyebrow">Prototype</div>
+            <h1 class="display-1" style="margin-bottom: 12px;">MyRealTrip Alumni</h1>
+            <p class="body-lg text-muted">전체 페이지 인덱스. 각 항목을 클릭해 화면을 확인할 수 있습니다.</p>
+          </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="테마 전환"></button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="padding: 48px 24px 80px;">
+      <!-- 사용자 플로우 -->
+      <h2 class="h2 mb-6">알럼나이 사용자 플로우</h2>
+      <div class="grid grid-4 grid--gap-lg mb-8">
+        <a href="index.html" class="frame-card">
+          <span class="frame-card__no">01 · LANDING</span>
+          <div class="frame-card__title">랜딩 페이지</div>
+          <div class="frame-card__desc">서비스 소개 및 진입점</div>
+        </a>
+        <a href="login.html" class="frame-card">
+          <span class="frame-card__no">02 · AUTH</span>
+          <div class="frame-card__title">로그인</div>
+          <div class="frame-card__desc">개인 이메일 입력</div>
+        </a>
+        <a href="verify-otp.html" class="frame-card">
+          <span class="frame-card__no">03 · AUTH</span>
+          <div class="frame-card__title">OTP 인증</div>
+          <div class="frame-card__desc">6자리 코드 입력</div>
+        </a>
+        <a href="register.html" class="frame-card">
+          <span class="frame-card__no">04 · AUTH</span>
+          <div class="frame-card__title">본인 정보 확인</div>
+          <div class="frame-card__desc">인사 DB 매칭</div>
+        </a>
+        <a href="dashboard.html" class="frame-card">
+          <span class="frame-card__no">05 · HOME</span>
+          <div class="frame-card__title">홈 / 대시보드</div>
+          <div class="frame-card__desc">발급 현황 및 빠른 신청</div>
+        </a>
+        <a href="certificates.html" class="frame-card">
+          <span class="frame-card__no">06 · CERT</span>
+          <div class="frame-card__title">증명서 종류 선택</div>
+          <div class="frame-card__desc">3종 비교 및 선택</div>
+        </a>
+        <a href="career-cert-form.html" class="frame-card">
+          <span class="frame-card__no">07 · CERT</span>
+          <div class="frame-card__title">경력증명서 신청</div>
+          <div class="frame-card__desc">언어·부수·용도 입력</div>
+        </a>
+        <a href="career-cert-preview.html" class="frame-card">
+          <span class="frame-card__no">08 · CERT</span>
+          <div class="frame-card__title">경력증명서 미리보기</div>
+          <div class="frame-card__desc">PDF 형태 검토</div>
+        </a>
+        <a href="career-cert-done.html" class="frame-card">
+          <span class="frame-card__no">09 · CERT</span>
+          <div class="frame-card__title">경력증명서 발급 완료 (승인 후)</div>
+          <div class="frame-card__desc">담당자 승인 시 사용자에게 보여지는 화면</div>
+        </a>
+        <a href="payslip-request.html" class="frame-card">
+          <span class="frame-card__no">10 · REQ</span>
+          <div class="frame-card__title">급여명세서 요청</div>
+          <div class="frame-card__desc">기간 선택 후 담당자 처리</div>
+        </a>
+        <a href="withholding-request.html" class="frame-card">
+          <span class="frame-card__no">11 · REQ</span>
+          <div class="frame-card__title">원천징수영수증 요청</div>
+          <div class="frame-card__desc">귀속연도 선택</div>
+        </a>
+        <a href="request-submitted.html" class="frame-card">
+          <span class="frame-card__no">12 · REQ</span>
+          <div class="frame-card__title">요청 접수 완료</div>
+          <div class="frame-card__desc">처리 타임라인 안내</div>
+        </a>
+        <a href="history.html" class="frame-card">
+          <span class="frame-card__no">13 · HISTORY</span>
+          <div class="frame-card__title">신청 내역</div>
+          <div class="frame-card__desc">전체 발급 이력 및 상태</div>
+        </a>
+        <a href="community.html" class="frame-card">
+          <span class="frame-card__no">14 · FUTURE</span>
+          <div class="frame-card__title">커뮤니티</div>
+          <div class="frame-card__desc">제공 예정 서비스 안내</div>
+        </a>
+      </div>
+
+      <!-- 어드민 -->
+      <div class="divider" style="margin: 40px 0;"></div>
+      <h2 class="h2 mb-6">담당자 어드민</h2>
+      <div class="grid grid-4 grid--gap-lg">
+        <a href="admin.html" class="frame-card">
+          <span class="frame-card__no">A1 · ADMIN</span>
+          <div class="frame-card__title">요청 관리 대시보드</div>
+          <div class="frame-card__desc">인사·회계팀 요청 처리</div>
+        </a>
+      </div>
+
+      <!-- 안내 -->
+      <div class="card mt-12" style="background: var(--gray-100); border: none; margin-top: 48px;">
+        <h3 class="h4 mb-2">프로토타입 안내</h3>
+        <ul class="text-muted body-sm" style="line-height: 1.85; padding-left: 18px; margin: 0;">
+          <li>정적 HTML로 제작되어 별도 서버 없이 동작합니다. 페이지 간 이동 흐름은 실제와 동일합니다.</li>
+          <li>표시되는 사용자 정보(이윤재 등)는 더미 데이터입니다.</li>
+          <li>본인 인증은 이메일 OTP와 인사 DB 매칭의 2단계로 설계되었습니다.</li>
+          <li>경력증명서는 자동 발급, 급여명세서·원천징수영수증은 담당자 검토 후 발송 방식입니다.</li>
+          <li>최종 디자인, 카피, 워크플로우는 검토 후 조정 가능합니다.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/partials.js"></script>
+</body>
+</html>

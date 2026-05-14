@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>증명서 발급 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div data-include="header" data-active="certificates"></div>
+
+  <main>
+    <section style="padding: 40px 0 24px;">
+      <div class="container">
+        <a href="dashboard.html" class="caption" style="color:var(--gray-600); margin-bottom: 16px; display:inline-block;">← 홈으로</a>
+        <div class="eyebrow">Certificates</div>
+        <h1 class="display-2" style="margin-bottom: 8px;">증명서 발급</h1>
+        <p class="body text-muted">필요한 증명서 종류를 선택해 신청하실 수 있습니다.</p>
+      </div>
+    </section>
+
+    <div class="container" style="padding-bottom: 80px;">
+      <!-- 필터 -->
+      <div class="row gap-2" style="margin-bottom: 24px;">
+        <button class="btn btn--secondary btn--sm">전체</button>
+        <button class="btn btn--outline btn--sm">즉시 발급</button>
+        <button class="btn btn--outline btn--sm">담당자 처리</button>
+      </div>
+
+      <div class="grid grid-2 grid--gap-lg">
+        <!-- 경력증명서 -->
+        <article class="card">
+          <div class="row" style="justify-content:space-between; align-items:flex-start; margin-bottom: 16px;">
+            <span class="caption" style="font-weight:600; letter-spacing:0.04em; color:var(--gray-500);">CAREER</span>
+            <span class="badge"><span class="dot"></span> 영업일 1일</span>
+          </div>
+          <h2 class="h2 mb-2">경력증명서</h2>
+          <p class="text-muted body-sm mb-6" style="line-height:1.7;">
+            마이리얼트립 재직 사실, 부서, 직위 등이 기재된 공식 증명서입니다.
+            인사팀이 확인 후 이메일로 발송합니다.
+          </p>
+
+          <div style="border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 16px;">
+            <div class="caption" style="line-height: 1.9;">
+              <div class="row" style="justify-content:space-between;"><span>언어</span><span style="color:var(--gray-900); font-weight:500;">국문 / 영문</span></div>
+              <div class="row" style="justify-content:space-between;"><span>발급 비용</span><span style="color:var(--gray-900); font-weight:500;">무료</span></div>
+              <div class="row" style="justify-content:space-between;"><span>발급 기한</span><span style="color:var(--gray-900); font-weight:500;">퇴사 후 3년 이내</span></div>
+              <div class="row" style="justify-content:space-between;"><span>소요 시간</span><span style="color:var(--gray-900); font-weight:500;">영업일 기준 1일</span></div>
+            </div>
+          </div>
+
+          <a href="career-cert-form.html" class="btn btn--primary btn--block">신청하기</a>
+        </article>
+
+        <!-- 급여명세서 -->
+        <article class="card">
+          <div class="row" style="justify-content:space-between; align-items:flex-start; margin-bottom: 16px;">
+            <span class="caption" style="font-weight:600; letter-spacing:0.04em; color:var(--gray-500);">PAYSLIP</span>
+            <span class="badge"><span class="dot"></span> 영업일 1일</span>
+          </div>
+          <h2 class="h2 mb-2">급여명세서</h2>
+          <p class="text-muted body-sm mb-6" style="line-height:1.7;">
+            재직 기간 동안의 월별 급여 내역이 기재된 명세서입니다.
+            신청 시 인사팀이 확인 후 이메일로 발송합니다.
+          </p>
+
+          <div style="border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 16px;">
+            <div class="caption" style="line-height: 1.9;">
+              <div class="row" style="justify-content:space-between;"><span>기간 선택</span><span style="color:var(--gray-900); font-weight:500;">월 단위</span></div>
+              <div class="row" style="justify-content:space-between;"><span>발급 비용</span><span style="color:var(--gray-900); font-weight:500;">무료</span></div>
+              <div class="row" style="justify-content:space-between;"><span>발송 방식</span><span style="color:var(--gray-900); font-weight:500;">암호화 PDF · 이메일</span></div>
+              <div class="row" style="justify-content:space-between;"><span>소요 시간</span><span style="color:var(--gray-900); font-weight:500;">영업일 기준 1일</span></div>
+            </div>
+          </div>
+
+          <a href="payslip-request.html" class="btn btn--primary btn--block">신청하기</a>
+        </article>
+
+        <!-- 원천징수 -->
+        <article class="card">
+          <div class="row" style="justify-content:space-between; align-items:flex-start; margin-bottom: 16px;">
+            <span class="caption" style="font-weight:600; letter-spacing:0.04em; color:var(--gray-500);">WITHHOLDING</span>
+            <span class="badge"><span class="dot"></span> 영업일 1~2일</span>
+          </div>
+          <h2 class="h2 mb-2">근로소득원천징수영수증</h2>
+          <p class="text-muted body-sm mb-6" style="line-height:1.7;">
+            국세청 양식의 근로소득 원천징수 영수증입니다.
+            연말정산, 대출, 비자 신청 등의 용도로 사용 가능합니다.
+          </p>
+
+          <div class="alert alert--warning" style="margin-bottom: 16px; font-size:13px;">
+            <div>
+              <strong>당해년도 발급 안내</strong><br/>
+              원천세 신고일(매월 10일) 이후 발급 가능합니다. (예: 7월 퇴사자 → 8월 10일 이후)
+            </div>
+          </div>
+
+          <a href="withholding-request.html" class="btn btn--primary btn--block">신청하기</a>
+        </article>
+
+        <!-- 기타 증명서 안내 -->
+        <article class="card" style="background: var(--gray-100); border-color: var(--gray-200);">
+          <div class="row" style="justify-content:space-between; align-items:flex-start; margin-bottom: 16px;">
+            <span class="caption" style="font-weight:600; letter-spacing:0.04em; color:var(--gray-500);">CUSTOM</span>
+          </div>
+          <h2 class="h2 mb-2">기타 증명서</h2>
+          <p class="text-muted body-sm mb-6" style="line-height:1.7;">
+            재직증명서, 영문 급여명세서, 휴직 증명서 등 위 목록에 없는 증명서가 필요한 경우
+            인사팀에 직접 요청해 주시기 바랍니다. 영업일 기준 1일 이내 답변드립니다.
+          </p>
+
+          <a href="mailto:hr@myrealtrip.com" class="btn btn--outline btn--block">인사팀에 문의하기</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/partials.js"></script>
+</body>
+</html>

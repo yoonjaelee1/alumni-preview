@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>요청 접수 완료 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div data-include="header" data-active="certificates"></div>
+
+  <main>
+    <div class="container-narrow" style="padding: 40px 24px 80px;">
+      <div class="card" style="padding: 40px;">
+        <div class="row gap-2 mb-4">
+          <span class="badge"><span class="dot"></span> 접수 완료</span>
+        </div>
+        <h1 class="h1 mb-2">요청이 접수되었습니다</h1>
+        <p class="body text-muted mb-8">
+          담당자 확인 후 등록된 이메일로 발송됩니다.
+        </p>
+
+        <!-- 요청 요약 -->
+        <div style="border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 24px;">
+          <div class="row" style="justify-content:space-between; padding: 8px 0;">
+            <span class="caption">요청 번호</span>
+            <span class="body-sm font-semibold">REQ-2026-05-14-00237</span>
+          </div>
+          <div class="divider" style="margin: 8px 0;"></div>
+          <div class="row" style="justify-content:space-between; padding: 8px 0;">
+            <span class="caption">요청 항목</span>
+            <span class="body-sm font-semibold">경력증명서 (국문 · 1부)</span>
+          </div>
+          <div class="divider" style="margin: 8px 0;"></div>
+          <div class="row" style="justify-content:space-between; padding: 8px 0;">
+            <span class="caption">신청 일시</span>
+            <span class="body-sm font-semibold">2026.05.14 15:48</span>
+          </div>
+          <div class="divider" style="margin: 8px 0;"></div>
+          <div class="row" style="justify-content:space-between; padding: 8px 0;">
+            <span class="caption">담당자</span>
+            <span class="body-sm font-semibold">인사팀 김인사 매니저</span>
+          </div>
+          <div class="divider" style="margin: 8px 0;"></div>
+          <div class="row" style="justify-content:space-between; padding: 8px 0;">
+            <span class="caption">예상 처리 완료</span>
+            <span class="body-sm font-semibold">2026.05.15 (영업일 1일)</span>
+          </div>
+        </div>
+
+        <!-- 진행 상태 -->
+        <div style="margin-bottom: 32px;">
+          <div class="caption" style="font-weight:600; color:var(--gray-700); margin-bottom: 12px;">처리 상태</div>
+          <div style="border-left: 2px solid var(--gray-200); padding-left: 20px;">
+            <div style="position: relative; padding: 8px 0;">
+              <div style="position:absolute; left:-26px; top:14px; width:10px; height:10px; border-radius:50%; background:var(--gray-900);"></div>
+              <div class="body-sm font-semibold">요청 접수 완료</div>
+              <div class="caption">담당자에게 알림 전달됨 · 방금 전</div>
+            </div>
+            <div style="position: relative; padding: 8px 0;">
+              <div style="position:absolute; left:-26px; top:14px; width:10px; height:10px; border-radius:50%; background:white; border:2px solid var(--gray-400);"></div>
+              <div class="body-sm">담당자 확인 중</div>
+              <div class="caption">영업일 기준 1일 이내</div>
+            </div>
+            <div style="position: relative; padding: 8px 0;">
+              <div style="position:absolute; left:-26px; top:14px; width:10px; height:10px; border-radius:50%; background:white; border:2px solid var(--gray-300);"></div>
+              <div class="body-sm text-muted">이메일 발송</div>
+              <div class="caption">yoonjae.lee@gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gap-2">
+          <a href="history.html" class="btn btn--primary">신청 내역 보기</a>
+          <a href="dashboard.html" class="btn btn--outline">홈으로</a>
+        </div>
+      </div>
+
+      <!-- 추가 안내 -->
+      <div class="alert mt-6">
+        <div>
+          <div class="alert__title">진행 상태 알림</div>
+          <div class="alert__body">
+            요청 상태가 변경되면 등록된 휴대폰(010-****-1234)으로 알림이 발송됩니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/partials.js"></script>
+</body>
+</html>

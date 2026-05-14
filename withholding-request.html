@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>원천징수영수증 요청 — MyRealTrip Alumni</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div data-include="header" data-active="certificates"></div>
+
+  <main>
+    <div class="container-narrow" style="padding: 48px 24px 80px;">
+      <a href="certificates.html" class="caption" style="color:var(--gray-600); margin-bottom: 16px; display:inline-block;">← 증명서 선택으로</a>
+
+      <div class="row gap-2 mb-4">
+        <span class="badge"><span class="dot"></span> 영업일 1~2일 소요</span>
+      </div>
+      <h1 class="h1 mb-2">근로소득원천징수영수증 요청</h1>
+      <p class="body text-muted mb-8">
+        귀속연도를 선택해 주세요. 회계팀이 확인 후 등록된 이메일로 발송합니다.
+      </p>
+
+      <form action="request-submitted.html?type=withholding" method="get">
+        <!-- 귀속연도 -->
+        <div class="card mb-6">
+          <h2 class="card__title mb-6">귀속연도 선택</h2>
+
+          <div data-radio-group class="grid grid-2 gap-3">
+            <label class="radio-card selected">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">2025년</div>
+                <div class="caption">퇴사 연도 · 재직 1.1~11.30</div>
+              </div>
+              <input type="radio" name="year" value="2025" checked hidden />
+            </label>
+            <label class="radio-card">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">2024년</div>
+                <div class="caption">연간 전체</div>
+              </div>
+              <input type="radio" name="year" value="2024" hidden />
+            </label>
+            <label class="radio-card">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">2023년</div>
+                <div class="caption">연간 전체</div>
+              </div>
+              <input type="radio" name="year" value="2023" hidden />
+            </label>
+            <label class="radio-card">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">2022년</div>
+                <div class="caption">연간 전체</div>
+              </div>
+              <input type="radio" name="year" value="2022" hidden />
+            </label>
+            <label class="radio-card">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">2021년</div>
+                <div class="caption">입사 연도 · 재직 3.15~12.31</div>
+              </div>
+              <input type="radio" name="year" value="2021" hidden />
+            </label>
+            <label class="radio-card">
+              <span class="radio-card__dot"></span>
+              <div style="flex:1;">
+                <div class="body font-semibold">전체 재직 기간</div>
+                <div class="caption">2021~2025 모두 발급</div>
+              </div>
+              <input type="radio" name="year" value="all" hidden />
+            </label>
+          </div>
+        </div>
+
+        <div class="alert alert--warning mb-6">
+          <div>
+            <div class="alert__title">당해년도(2025) 영수증 발급 안내</div>
+            <div class="alert__body">
+              원천세 신고일(매월 10일) 이후 발급 가능합니다.
+              현재 날짜 기준 2025.11 퇴사 → <strong>2025.12.10 이후 신청 가능</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 신청 사유 -->
+        <div class="card mb-6">
+          <h2 class="card__title mb-6">신청 정보</h2>
+
+          <div class="field">
+            <label class="label label__required" for="purpose">제출 용도</label>
+            <select class="select" id="purpose">
+              <option value="">선택해주세요</option>
+              <option>연말정산 / 종합소득세 신고</option>
+              <option>이직 / 재취업 (소득 증빙)</option>
+              <option>대출 / 금융 거래</option>
+              <option>비자 / 해외 체류</option>
+              <option>관공서 제출</option>
+              <option>기타</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="label" for="note">담당자에게 전달할 메모 <span class="caption" style="font-weight:400;">(선택)</span></label>
+            <textarea class="textarea" id="note" rows="3" placeholder="특별한 요청 사항이 있다면 입력해주세요"></textarea>
+          </div>
+        </div>
+
+        <!-- 수령 -->
+        <div class="card mb-6">
+          <h2 class="card__title mb-4">수령 방식</h2>
+          <div class="body-sm">
+            암호화된 PDF가 <strong>yoonjae.lee@gmail.com</strong> 으로 발송됩니다.
+            <span class="text-muted">파일 비밀번호는 별도 SMS로 전송됩니다.</span>
+          </div>
+        </div>
+
+        <div class="row gap-2" style="justify-content: flex-end;">
+          <a href="certificates.html" class="btn btn--outline">취소</a>
+          <button type="submit" class="btn btn--primary">요청 보내기</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div data-include="footer"></div>
+  <script src="assets/partials.js"></script>
+</body>
+</html>
