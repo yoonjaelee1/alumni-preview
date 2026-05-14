@@ -75,7 +75,6 @@ function renderHeaderMinimal() {
       </a>
       <div class="nav-actions">
         <button class="theme-toggle" data-theme-toggle aria-label="테마 전환"></button>
-        <a href="login.html" class="btn btn--ghost btn--sm">로그인</a>
         <a href="login.html" class="btn btn--primary btn--sm">시작하기</a>
       </div>
     </div>
@@ -104,7 +103,6 @@ function renderFooter() {
         </div>
         <div>
           <div class="footer-title">지원</div>
-          <a class="footer-link" href="#">자주 묻는 질문</a>
           <a class="footer-link" href="mailto:mrthr@myrealtrip.com">담당자 문의</a>
         </div>
         <div>
